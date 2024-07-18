@@ -11,4 +11,4 @@ Fill the program folders with these:
 And correct the paths within the `bin\*.cmd` files to point to the correct locations.
 
 ### Exe entry points
-The .exe entry points are created by running `compile-cmd-wrappers.cmd` to output `MikTex.exe` and `TexStudio.exe` and then using the program ResourceHacker to add the appropriate icons from the `assets` directory.
+The .exe entry points are created by running `compile-cmd-wrappers.cmd` to output `MiKTeX.exe` and `TeXstudio.exe` and then using the program ResourceHacker to add the appropriate icons from the `assets` directory.
