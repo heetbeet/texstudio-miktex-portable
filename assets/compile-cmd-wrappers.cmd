@@ -21,11 +21,11 @@ Remove-Item -Recurse -Force $tempBuild -ErrorAction Ignore
 New-Item -Type Directory -Force -Path $tempBuild | Out-Null
 
 $thisdir = Split-Path $Env:_cmd
-& "$tempFolderPath/tcc/tcc.exe" "$thisdir/cmd-wrapper.c" -luser32 -lkernel32 -o "$tempBuild/MikTex.exe"
-& "$tempFolderPath/tcc/tcc.exe" -DNOSHELL "$thisdir/cmd-wrapper.c" -luser32 -lkernel32 -o "$tempBuild/TexStudio.exe"
+& "$tempFolderPath/tcc/tcc.exe" "$thisdir/cmd-wrapper.c" -luser32 -lkernel32 -o "$tempBuild/MiKTeX.exe"
+& "$tempFolderPath/tcc/tcc.exe" -DNOSHELL "$thisdir/cmd-wrapper.c" -luser32 -lkernel32 -o "$tempBuild/TeXstudio.exe"
 
 Write-Host ""
-#Write-Host "Compiled output: $tempBuild/MikTex.exe"
-Write-Host "Compiled output: $tempBuild/TexStudio.exe"
+#Write-Host "Compiled output: $tempBuild/MiKTeX.exe"
+Write-Host "Compiled output: $tempBuild/TeXstudio.exe"
 
 & explorer $tempBuild
